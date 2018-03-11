@@ -16,7 +16,25 @@ module.exports = {
 		query: {
 		    presets: ['react', 'es2015', 'stage-3'] // load the react, es2015 babel settings
 		}
-	    }
+	    },
+        {
+            test: /\.scss$/,
+            //include: path.join(__dirname, 'src'),
+            //loader: 'style!css!sass', old
+            use: [
+                {
+                    loader: 'style-loader'
+
+                },
+                {
+                    loader: 'css-loader'
+
+                },
+                {
+                    loader: 'sass-loader'
+                }
+            ]
+        }
 	]
     }
 };

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import store from './stores/configureStore'
 import Conversion from './containers/conversion.js';
-
+import './main.scss'
 
 
 class MainComponent extends React.Component {
